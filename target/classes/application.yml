@@ -1,0 +1,38 @@
+server:
+  port: 10000
+  address: 0.0.0.0
+
+spring:
+  datasource:
+    # driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:postgresql://dpg-cjsttpe3m8ac7391hrjg-a:5432/house_j42q
+    username: houseuser
+    password: RfAVV1LEZsQMmj8i2UBnLoZVLhzF2dHc
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+  main:
+    allow-circular-references: true
+
+# server:
+#   port: 9090
+
+# spring:
+#   datasource:
+#     # driver-class-name: com.mysql.jdbc.Driver
+#     url: jdbc:postgresql://dpg-cjsttpe3m8ac7391hrjg-a.oregon-postgres.render.com:5432/house_j42q
+#     username: houseuser
+#     password: RfAVV1LEZsQMmj8i2UBnLoZVLhzF2dHc
+#   jpa:
+#     show-sql: true
+#     hibernate:
+#       ddl-auto: update
+#     properties:
+#       hibernate:
+#       dialect: org.hibernate.dialect.PostgreSQLDialect
+#   main:
+#     allow-circular-references: true
