@@ -6,6 +6,7 @@ import com.house.helper.MessageHelper;
 import com.house.helper.ResponseHelper;
 import com.house.repository.ExerciceRepository;
 import com.house.service.ExerciceService;
+import com.house.service.HouseHoldService;
 import com.house.service.NewUSers;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,8 @@ public class ExerciceControler {
     @Autowired
     private ExerciceService exerciceService;
 
+    @Autowired
+    private HouseHoldService houseHoldService;
     @Autowired
     private NewUSers uSers;
     
@@ -158,6 +161,11 @@ public class ExerciceControler {
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<?> deleteById(@RequestHeader(name = "Accept-Language", required = false) String localeString,@PathVariable(name = "id") Integer id) {
+        if (houseHoldService.checkExercice(id)) {
+            return new ResponseEntity<>(
+            new ResponseHelper(MessageHelper.deleteFeild(new Locale(localeString))),HttpStatus.NOT_ACCEPTABLE);
+            }  
+
         boolean dto = exerciceService.deleteById(id);
 
         if (dto) {

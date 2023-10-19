@@ -21,6 +21,9 @@ List<HouseHoldEntitty> filterByExerciseId(@Param("idExercise") Integer idExercis
 @Query(value = "SELECT count(h) FROM HouseHoldEntitty h WHERE h.idExercise =?1") 
 Integer countMenage(Integer idExercice);
 
+@Query(value = "SELECT count(h)>0 FROM HouseHoldEntitty h WHERE h.idExercise =?1") 
+boolean checkManageByExercice(Integer idExercice);
+
 @Query(value = "SELECT count(h) FROM HouseHoldEntitty h WHERE h.idExercise =?1 and childrenWithDisabilities=true") 
 Integer nombreMenageHandicape(Integer idExercice);
 
