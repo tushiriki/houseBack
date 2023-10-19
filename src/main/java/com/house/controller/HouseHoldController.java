@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 @CrossOrigin(origins = "*")
@@ -131,8 +132,15 @@ public class HouseHoldController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteExercise(@PathVariable Integer id) {
-        houseHoldService.delete(id);
-        return ResponseEntity.ok().build();
+    public ResponseEntity<Object> deleteExercise(@RequestHeader(name = "Accept-Language", required = false) String localeString,@PathVariable Integer id) {
+         boolean dataDelete=houseHoldService.delete(id); 
+                   if (dataDelete) {
+                           return new ResponseEntity<>(
+                                           new ResponseHelper(MessageHelper.deleted(new Locale(localeString)), true),
+                                           HttpStatus.OK);
+                   } else {
+                           return new ResponseEntity<>(new ResponseHelper(MessageHelper.deleteFeild(new Locale(localeString)), false),
+                                           HttpStatus.INTERNAL_SERVER_ERROR);
+                   } 
     }
 }
