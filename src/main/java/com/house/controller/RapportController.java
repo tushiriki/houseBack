@@ -29,7 +29,7 @@ public class RapportController {
                                 @RequestHeader(name = "Accept-Language", required = false) String localeString,  
                                  @RequestParam(required = false) Integer idTrimestre,
                                  @RequestParam(required = false) Integer idExercice,
-                                 @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size,
+                                 @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "0") int size,
                                  @RequestParam(defaultValue = "id,asc") String[] sort) {
        
                 if (size == 0)
@@ -53,7 +53,7 @@ public class RapportController {
                                 @RequestHeader(name = "Accept-Language", required = false) String localeString,  
                                  @RequestParam(required = false) Integer idTrimestre,
                                  @RequestParam(required = false) Integer idExercice,
-                                 @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size,
+                                 @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "0") int size,
                                  @RequestParam(defaultValue = "id,asc") String[] sort) {
        
                 if (size == 0)
@@ -77,7 +77,7 @@ public class RapportController {
                                 @RequestHeader(name = "Accept-Language", required = false) String localeString,  
                                  @RequestParam(required = false) Integer idTrimestre,
                                  @RequestParam(required = false) Integer idExercice,
-                                 @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size,
+                                 @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "0") int size,
                                  @RequestParam(defaultValue = "id,asc") String[] sort) {
        
                 if (size == 0)
@@ -99,7 +99,7 @@ public class RapportController {
                                 @RequestHeader(name = "Accept-Language", required = false) String localeString,  
                                  @RequestParam(required = false) Integer idTrimestre,
                                  @RequestParam(required = false) Integer idExercice,
-                                 @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size,
+                                 @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "0") int size,
                                  @RequestParam(defaultValue = "id,asc") String[] sort) {
        //
                 if (size == 0)
@@ -123,7 +123,7 @@ public class RapportController {
                                 @RequestHeader(name = "Accept-Language", required = false) String localeString,  
                                  @RequestParam(required = false) Integer idTrimestre,
                                  @RequestParam(required = false) Integer idExercice,
-                                 @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size,
+                                 @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "0") int size,
                                  @RequestParam(defaultValue = "id,asc") String[] sort) {
        
                 if (size == 0)
