@@ -179,9 +179,7 @@ public class UserController {
             //     return new ResponseEntity<>(new ResponseHelper("you are not allowed", true), HttpStatus.UNAUTHORIZED);
             // }
             if (dto.getUsername().equals(dto1.getUsername()) && dto.getPassword().equals(dto1.getPassword()))
-             {
-                dto1.setPassword(null);
-                dto1.setDateCreation(null); 
+             { 
                 return new ResponseEntity<>(new ResponseHelper("success", dto1,true), HttpStatus.OK);
              }
 
