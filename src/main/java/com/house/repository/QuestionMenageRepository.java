@@ -119,7 +119,6 @@ Page<QuestionMenageEntity> getCombienFoisMangeParJour(Integer idExercice, Intege
 
 // @Query("select p from QuestionMenageEntity p JOIN HouseHoldEntitty  h ON p.idMenage=h.id where h.idExercise=?1 and p.combienFoisMangeParJour!=null")
 @Query("select p from QuestionMenageEntity p JOIN HouseHoldEntitty  h ON p.idMenage=h.id where h.idExercise=?1")
-
 Page<QuestionMenageEntity> getCombienFoisMangeParJour(Integer idExercice, Pageable pagingSort);
 
 @Query("select count(p) from QuestionMenageEntity p where p.idTrimestre=?1 and p.combienFoisMangeParJour!=null")
