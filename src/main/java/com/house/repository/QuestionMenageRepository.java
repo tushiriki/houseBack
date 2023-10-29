@@ -117,8 +117,7 @@ double getTotalCombienFoisMangeParJour(Integer idExercice, Integer idTrimestre);
 @Query("select p from QuestionMenageEntity p JOIN HouseHoldEntitty  h ON p.idMenage=h.id where h.idExercise=?1 and p.idTrimestre=?2 and p.combienFoisMangeParJour!=null")
 Page<QuestionMenageEntity> getCombienFoisMangeParJour(Integer idExercice, Integer idTrimestre, Pageable pagingSort);
 
-// @Query("select p from QuestionMenageEntity p JOIN HouseHoldEntitty  h ON p.idMenage=h.id where h.idExercise=?1 and p.combienFoisMangeParJour!=null")
-@Query("select p from QuestionMenageEntity p JOIN HouseHoldEntitty  h ON p.idMenage=h.id where h.idExercise=?1")
+@Query("select p from QuestionMenageEntity p JOIN HouseHoldEntitty  h ON p.idMenage=h.id where h.idExercise=?1 and p.combienFoisMangeParJour!=null")
 Page<QuestionMenageEntity> getCombienFoisMangeParJour(Integer idExercice, Pageable pagingSort);
 
 @Query("select count(p) from QuestionMenageEntity p where p.idTrimestre=?1 and p.combienFoisMangeParJour!=null")
