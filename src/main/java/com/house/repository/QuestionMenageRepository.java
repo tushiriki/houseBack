@@ -111,7 +111,7 @@ Integer getTotalListQuatre(Integer idExercice, Integer idTrimestre);
 double getTotalEnfantHandicapeDicussionGroupe(Integer idTrimestre);
 
 
-@Query("select ifnull(SUM(p.combienFoisMangeParJour) ,0) from QuestionMenageEntity p JOIN HouseHoldEntitty  h ON p.idMenage=h.id where h.idExercise=?1 and p.idTrimestre=?2 and p.combienFoisMangeParJour!=null")
+@Query("select ifnull(AVG(p.combienFoisMangeParJour) ,0) from QuestionMenageEntity p JOIN HouseHoldEntitty  h ON p.idMenage=h.id where h.idExercise=?1 and p.idTrimestre=?2 and p.combienFoisMangeParJour!=null")
 double getTotalCombienFoisMangeParJour(Integer idExercice, Integer idTrimestre);
 
 @Query("select p from QuestionMenageEntity p JOIN HouseHoldEntitty  h ON p.idMenage=h.id where h.idExercise=?1 and p.idTrimestre=?2 and p.combienFoisMangeParJour!=null")
