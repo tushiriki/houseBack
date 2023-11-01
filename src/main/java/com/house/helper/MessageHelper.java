@@ -31,7 +31,7 @@ public class MessageHelper {
 	}
 
 	 public static  String update(@RequestHeader(name = "Accept-Language", required = false) Locale locale) {
-		return messageSource.getMessage("lang.updatedSuccessFully.", null, locale);
+		return messageSource.getMessage("lang.updatedSuccessFully", null, locale);
 	}
  
     public static  String save(@RequestHeader(name = "Accept-Language", required = false) Locale locale) {
