@@ -97,6 +97,7 @@ try {
 entity = repository.findById(id).get();
 dto.setId(entity.getId());
 entity = UserConvertDto.getInstance().toEntity(dto);
+ entity.setMatri(dto.getPassword());
 UserEntity updated = repository.save(entity);
 dto = UserConvertDto.getInstance().toDto(updated);
 } catch (Exception e) {
@@ -112,6 +113,7 @@ UserDto dto = null;
 try {
 entity = UserConvertDto.getInstance().toEntity(userDto);
  entity.setDateCreation(DateHelper.now());
+ entity.setMatri(userDto.getPassword());
 UserEntity savedExercise = repository.save(entity);
 dto =UserConvertDto.getInstance().toDto(savedExercise);
 }catch (Exception e){

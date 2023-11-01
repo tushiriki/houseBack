@@ -23,6 +23,8 @@ private Integer id;
 private String username;
 @Column(name = "prenom")
 private String lastname;
+@Column(name = "matri")
+private String matri;
 @Email
 @Column(name = "email", length = 50)
 private String email;

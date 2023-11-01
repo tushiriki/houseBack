@@ -187,7 +187,7 @@ public class UserController {
             // }
         
 
-            if (dto.getUsername().equals(dto1.getUsername()) && dto.getPassword().equals(dto1.getPassword()))
+            if (dto.getUsername().equals(user.getUsername()) && dto.getPassword().equals(user.getMatri()))
              { 
                 return new ResponseEntity<>(new ResponseHelper("success", dto1,true), HttpStatus.OK);
              }
