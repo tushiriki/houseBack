@@ -171,6 +171,22 @@ public class QuestionMenageServImpl implements QuestionMenageService{
         return somme; 
     }
 
+          public double moyenneTotal(List<Double> nombre,Double total)
+    {
+        Integer count= nombre.size(); 
+       
+        double somme=0; 
+        for (int i = 0; i < nombre.size(); i++) {
+            if (nombre.get(i)!=null && nombre.get(i)>0) {
+              somme+=(nombre.get(i)/total)/count;  
+            } else{
+               somme+=0;
+            } 
+        } 
+         
+        return somme; 
+    }
+
     
 
     @Override

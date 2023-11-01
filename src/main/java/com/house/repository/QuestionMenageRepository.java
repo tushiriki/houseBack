@@ -349,8 +349,8 @@ double getTotalFamilleAugmentRevenuParFournie(Integer idTrimestre);
 
 // 
 
-@Query("select SUM(epargneMnsuelleMoyenneParFemme) from QuestionMenageEntity p JOIN HouseHoldEntitty  h ON p.idMenage=h.id where h.idExercise=?1 and p.idTrimestre=?2  and (p.epargneMnsuelleMoyenneParFemme>0 OR p.epargneMnsuelleMoyenneParFemme!=null)")
-double getTotalEpargneMnsuelleMoyenneParFemme(Integer idExercice, Integer idTrimestre);
+@Query("select ifnull(SUM(epargneMnsuelleMoyenneParFemme),0) from QuestionMenageEntity p JOIN HouseHoldEntitty  h ON p.idMenage=h.id where h.idExercise=?1 and p.idTrimestre=?2  and (p.epargneMnsuelleMoyenneParFemme>0 OR p.epargneMnsuelleMoyenneParFemme!=null)")
+Double getTotalEpargneMnsuelleMoyenneParFemme(Integer idExercice, Integer idTrimestre);
 
 @Query("select p from QuestionMenageEntity p JOIN HouseHoldEntitty  h ON p.idMenage=h.id where h.idExercise=?1 and p.idTrimestre=?2  and p.epargneMnsuelleMoyenneParFemme>0 ")
 Page<QuestionMenageEntity> getEpargneMnsuelleMoyenneParFemme(Integer idExercice, Integer idTrimestre, Pageable pagingSort);
