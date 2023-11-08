@@ -21,6 +21,7 @@ public class QuestionMenageDto {
     private Integer typerevêtementSol;
     private Integer chaise; 
     private Integer outilInformation;
+    private Integer outilTransport;
     private Integer electricite;
     private Integer electriciteCuisine;
     private boolean membreMenagePorteChaussirLit;
