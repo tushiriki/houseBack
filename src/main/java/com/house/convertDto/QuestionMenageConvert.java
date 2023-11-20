@@ -109,6 +109,13 @@ public class QuestionMenageConvert {
         dto.setEvaluationParticipantionAuxFormation(questionMenageEntity.getEvaluationParticipantionAuxFormarmation());//
         dto.setConsiderationPositiveAuxEnfantHendicape(questionMenageEntity.getConsiderationPositiveAuxEnfantHendicape());//
 
+        //AJOUT POUR NULL AU BOOLEAN
+         dto.setEnfantHadicapeAbandonneEcole2(questionMenageEntity.getEnfantHadicapeAbandonneEcole2());
+         dto.setEnfantHadicapeScolariser2(questionMenageEntity.getEnfantHadicapeScolariser2());
+         dto.setFemillePrete2(questionMenageEntity.getFemillePrete2());
+         dto.setActivteEnfantHandicapeAGR2(questionMenageEntity.getActivteEnfantHandicapeAGR2());
+         dto.setEnfantHandicapeDicussionGroupe2(questionMenageEntity.getEnfantHandicapeDicussionGroupe2());
+
         dto.setNombreGarconNeEtudierPas(questionMenageEntity.getNombreGarconNeEtudierPas());
         dto.setNombreFilleNeEtudierPas(questionMenageEntity.getNombreFilleNeEtudierPas());
         dto.setNombreGarconEtudierPrescolaire(questionMenageEntity.getNombreGarconEtudierPrescolaire());
@@ -216,6 +223,13 @@ public class QuestionMenageConvert {
                 dto.setEpargneMnsuelleMoyenneParFemme(questionMenageEntity.getEpargneMnsuelleMoyenneParFemme());
                 dto.setFemillePrete(questionMenageEntity.isFemillePrete());
                 dto.setChoixFamilleEnAGR(questionMenageEntity.getChoixFamilleEnAGR());
+
+                 //AJOUT POUR NULL AU BOOLEAN
+                dto.setEnfantHadicapeAbandonneEcole2(questionMenageEntity.getEnfantHadicapeAbandonneEcole2());
+                dto.setEnfantHadicapeScolariser2(questionMenageEntity.getEnfantHadicapeScolariser2());
+                dto.setFemillePrete2(questionMenageEntity.getFemillePrete2());
+                dto.setActivteEnfantHandicapeAGR2(questionMenageEntity.getActivteEnfantHandicapeAGR2());
+                dto.setEnfantHandicapeDicussionGroupe2(questionMenageEntity.getEnfantHandicapeDicussionGroupe2());
 
                 dto.setMenageTerrain(questionMenageEntity.getMenageTerrain());
                 dto.setMenageSuperficieTerrain(questionMenageEntity.getMenageSuperficieTerrain());
